@@ -3,55 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Staghorn</title>
+    <title>Staghorn Tree Services</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <h2 class="logo">Staghorn</h2>
-      <nav class="navigation">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Service</a>
-        <a href="#" class="active">Contact</a>
-      </nav>
-    </header>
-    <section class="parallax">
-      <div class="parallax__container">
-        <img src="./assets/hill1.png" id="hill1" alt="" />
-        <img src="./assets/hill2.png" id="hill2" alt="" />
-        <img src="./assets/hill3.png" id="hill3" alt="" />
-        <img src="./assets/hill4.png" id="hill4" alt="" />
-        <img src="./assets/hill5.png" id="hill5" alt="" />
-        <img src="./assets/tree.png" id="tree" alt="" />
-        <h2 id="text">Staghorn Tree Services</h2>
-        <img src="./assets/leaf.png" id="leaf" alt="" />
-        <img src="./assets/plant.png" id="plant" alt="" />
+    <div id="parallax-container">
+      <div class="nav-container">
+        <div class="navbar">
+          <h1 class="logo">Staghorn</h1>
+          <nav>
+            <ul class="nav-list">
+              <li class="nav-links"><a href="#">Home</a></li>
+              <li class="nav-links"><a href="#about">About</a></li>
+              <li class="nav-links"><a href="#services">Services</a></li>
+              <li class="nav-links"><a href="#" class="active">Contact</a></li>
+            </ul>
+            <ul class="mobile-menu">
+              <li><i class="fa-solid fa-bars"></i></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </section>
-    <section class="sec">
-      <h2>Hi, I'm Matt</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor saepe
-        ipsum fugiat, dolores ducimus minus molestias sunt dignissimos,
-        assumenda, iure accusantium. Debitis omnis magni iste aut.
-        Exercitationem dignissimos provident repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor saepe
-        ipsum fugiat, dolores ducimus minus molestias sunt dignissimos,
-        assumenda, iure accusantium. Debitis omnis magni iste aut.
-        Exercitationem dignissimos provident repudiandae.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor saepe
-        ipsum fugiat, dolores ducimus minus molestias sunt dignissimos,
-        assumenda, iure accusantium. Debitis omnis magni iste aut.
-        Exercitationem dignissimos provident repudiandae.
-      </p>
-    </section>
-    <script src="script.js"></script>
+      <header>
+        <img
+          src="./assets/staghorn-para-bg (2).png"
+          class="background"
+          alt=""
+        />
+        <h1>Staghorn Tree Services</h1>
+        <img src="./assets/staghorn-para-fg2.png" class="foreground" alt="" />
+      </header>
+      <section id="about">
+        <h1>Hey, I'm Matt.</h1>
+        <ul class="about-list">
+          <li class="about-item"><i class="fa-solid fa-leaf"></i><p class="about-text">I run a dedicated team of highly trained, professional arborists</p></li> 
+          <li class="about-item"><i class="fa-solid fa-leaf"></i><p class="about-text">We take pride in providing top-notch tree removal, pruning, planting, and disease management</p></li> 
+          <li class="about-item"><i class="fa-solid fa-leaf"></i><p class="about-text">All of our work is executed with the utmost care for the environment and our clients' needs</p></li> 
+        </ul>
+      </section>
+      <section id="services">
+        <h4 class="services-title">Services</h4>
+        <div class="card__container">
+          <div class="card-1 card">
+            <div class="front">
+              <div class="services-img__wrapper">
+                <img src="./assets/chainsaw-light.png" alt="" />
+              </div>
+              <h4 class="card-title">Tree Removal</h4>
+            </div>
+            <div class="back">
+              <!-- <p>Safely and efficiently remove trees.</p> -->
+            </div>
+          </div>
+          <div class="card-2 card">
+            <div class="services-img__wrapper">
+              <img src="./assets/sheers-light.png" alt="" />
+            </div>
+            <h4 class="card-title">Tree Pruning</h4>
+            <!-- <p>
+              Promote healthier growth, enhance aesthetics, and ensure the
+              safety of surrounding structures.
+            </p> -->
+          </div>
+          <div class="card-3 card">
+            <div class="services-img__wrapper">
+              <img src="./assets/care-light.png" alt="" />
+            </div>
+            <h4 class="card-title">Planting</h4>
+            <!-- <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sit
+              minus. Earum laudantium doloribus ipsam.
+            </p> -->
+          </div>
+          <!-- <div class="card-3 card">
+            <div class="services-img__wrapper">
+              <img src="./assets/lawnmower2.png" alt="" />
+            </div>
+            <h4 class="card-title">Lawn Care</h4>
+            <p>
+              Mowing, fertilizing, weed control, and overall lawn health
+              management.
+            </p>
+          </div>
+          <div class="card-4 card">
+            <div class="services-img__wrapper">
+              <img src="./assets/care.png" alt="" />
+            </div>
+            <h4 class="card-title">Disease Management</h4>
+            <p>
+              Advanced techniques to diagnose, treat, and prevent tree diseases.
+            </p>
+          </div> -->
+          <div class="card-4 card">
+            <div class="services-img__wrapper">
+              <img src="./assets/emergency-light.png" alt="" />
+            </div>
+            <h4 class="card-title">Emergency Services</h4>
+            <!-- <p>
+              Immediate, professional assistance in swiftly and safely removing
+              hazardous trees.
+            </p> -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

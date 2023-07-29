@@ -1,171 +1,258 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background: #f9f9f9;
-  /* height: 100vh; */
-  overflow-x: hidden;
+  /* background: linear-gradient(#fff 70%, orange); */
 }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+ul {
+  list-style: none;
+}
+
+.nav-container {
+  background: transparent;
+  /* position: absolute; */
+  width: 100vw;
   z-index: 100;
+  border-bottom: 2px solid #242424;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .logo {
-  font-size: 2em;
-  color: #359381;
-  pointer-events: none;
-  margin-right: 270px;
+  color: #242424;
+  margin-left: 30px;
+  font-size: 44px;
+  padding: 10px;
 }
 
-.navigation a {
+nav ul {
+  display: flex;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+nav li {
+  list-style: none;
+  font-size: 20px;
+}
+
+nav a {
   text-decoration: none;
-  color: #359381;
-  padding: 6px 15px;
-  border-radius: 20px;
-  margin: 0 10px;
+  color: #242424;
+  padding: 10px;
+  border-radius: 22px;
+  transition: all 100ms ease;
   font-weight: 600;
 }
 
-.navigation a:hover,
-.navigation a.active {
-  background: #359381;
-  color: #fff;
+nav a:hover,
+nav a.active {
+  background-color: #2a8271;
+  color: ghostwhite;
 }
 
-.parallax {
+.mobile-menu {
+  display: none;
+  color: #242424;
+  transform: scale(1.5);
+}
+
+/* PARALLAX  */
+
+#parallax-container {
   height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  scroll-behavior: smooth;
 }
 
-.parallax__container {
-  height: 100%;
-  width: 100%;
+header {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
 }
 
-#text {
+.background,
+.foreground {
+position: absolute;
+height: 100%;
+width: 100%;
+object-fit: cover;
+z-index: -1;
+}
+
+.background {
   position: absolute;
-  font-size: 5em;
+  transform: translateZ(-10px) scale(2.1);
+}
+
+.foreground img {
+  position: absolute;
+  transform: translateZ(-5px) scale(1.5);
+}
+
+header h1 {
+  text-align: center;
   color: ghostwhite;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+  transform: translateZ(-7px);
+  margin-bottom: 40px;
 }
+*/
 
-.parallax img {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* SERVICES */
+
+#services {
   width: 100%;
-  pointer-events: none;
+  z-index: 1;
+  padding: 20px;
+  background-color: ghostwhite;
 }
 
-.sec {
-  position: relative;
-  background: #003329;
-  padding: 100px;
-  margin-top: -100px;
+.services-title {
+  text-align: center;
+  font-size: 40px;
+  color: #242424;
+  text-shadow: 1px 1px 2px lightgray;
+  margin-bottom: 20px;
 }
 
-.sec h2 {
-  font-size: 3em;
-  color: ghostwhite;
+.card__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  padding: 30px;
+  margin: 0 20px;
+  /* rgb(59, 214, 59), #2a8271 */
+  /* background: linear-gradient(to top right,  10%, ghostwhite); */
+  background-color: #2a8271;
+  color: #242424;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px gray;
+  transition: all 800ms ease;
+  perspective: 1000px;
   margin-bottom: 10px;
 }
 
-.sec p {
-  font-size: 1em;
+.card:hover {
+  transform: scaleX(-1);
+}
+
+.services-img__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* brand yellow #f4cd30 green #08551a  */
+
+.card-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
   color: ghostwhite;
-  font-weight: 300;
 }
 
-@media only screen and (max-width: 767px) {
-  /* Adjust header */
-  .logo {
-    font-size: 1.5em;
-    margin-right: 0;
-  }
+.card p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: ghostwhite;
+}
 
-  header {
-    height: 20vh;
-    margin: 0;
-    padding: 10px;
-  }
+/* ABOUT  */
 
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
+#about {
+  background: linear-gradient(#013328 50%, #2a8271 75%, #fff);
+  width: 100%;
+  padding: 100px 20px 170px 200px;
+  color: ghostwhite;
+  margin-top: -5px;
+  z-index: 100;
+}
 
-  .navigation a {
-    margin: 10px 0;
-  }
+#about h1 {
+  font-size: 70px;
+}
 
-  /* Adjust parallax section */
-  .parallax {
-    height: 50vh;
-    overflow: visible;
-    position: relative;
-  }
+.about-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
 
-  .parallax img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.6;
-    z-index: -1;
-  }
+.about-item {
+  display: flex;
+  flex-direction: row;
+}
 
-  #text {
-    text-align: center;
-    font-size: 1em;
-    color: ghostwhite;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    width: 100%;
-  }
+.about-item i {
+  transform: scale(1.2);
+  padding-top: 8px;
+}
 
-  #leaf,
-  #plant {
-    /* display: none; */
-  }
+.about-item p {
+  margin-left: 10px;
+  font-size: 24px;
+}
 
-  /* Adjust section */
-  .sec {
-    background: #003329;
-    padding: 50px;
+@media screen and (max-width: 1000px) {
+  nav ul {
+    display: none;
   }
-
-  .sec h2 {
-    font-size: 2.5em;
-    color: ghostwhite;
-    margin-bottom: 10px;
-    text-align: center;
+  .mobile-menu {
+    display: inline-block;
   }
-
-  .sec p {
-    font-size: 1em;
-    color: ghostwhite;
-    font-weight: 300;
-    text-align: center;
+  #about {
+    padding-left: 20px;
   }
 }
+
+/* ABOUT  */
+
+/* #about h1 {
+  position: relative;
+  color: ghostwhite;
+} */
+
+/* @media screen and (max-width: 500px) {
+  header h1 {
+    top: 160px;
+    font-size: 40px;
+  }
+} */
