@@ -16,7 +16,7 @@
   </head>
   <body>
     <div id="parallax-container">
-      <div class="nav-container">
+      <div id="home" class="nav-container">
         <div class="navbar">
           <!-- <img class="logo-img" src="./assets/staghorn_logo-1.png" alt=""> -->
           <h1 class="logo">Staghorn</h1>
@@ -24,7 +24,7 @@
             <ul class="nav-list">
               <li class="nav-links"><a href="#">Home</a></li>
               <li class="nav-links"><a href="#about">About</a></li>
-              <li class="nav-links"><a href="#services">Services</a></li>
+              <li class="nav-links"><a href="#new-cards">Services</a></li>
               <li class="nav-links"><a href="#" class="active">Contact</a></li>
             </ul>
             <ul class="mobile-menu">
@@ -39,7 +39,12 @@
           class="background"
           alt=""
         />
-        <h1>Staghorn Tree Services</h1>
+        <!-- <h1>Staghorn Tree Service</h1> -->
+        <img
+          src="./assets/staghorn-logo-full-nobg-light.png"
+          class="parallax-logo"
+          alt=""
+        />
         <img src="./assets/staghorn-para-fg2.png" class="foreground" alt="" />
       </header>
       <section id="about">
@@ -67,6 +72,71 @@
           </li>
         </ul>
       </section>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit more about us.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Staghorn Tree Service
+          </h4>
+          <p class="modal__para">
+            We do most of our work in the
+            <b class="orange">Ottawa Valley</b>, including
+            <b class="orange">Pembroke</b>, <b class="orange">Petawawa</b>,
+            <b class="orange">Deep River</b>, <b class="orange">Arnprior</b> and
+            surrounding areas.
+            <br />
+            You can best reach us by calling or texting
+            <b class="orange">123-456-7890</b>, emailing
+            <b class="orange">email@email.com</b>, or reaching out through the
+            attached <b class="orange">contact form</b>.
+            <br />
+          </p>
+          <div class="modal__icons">
+            <figure class="modal__icon">
+              <img class="modal__icon--img" src="./assets/call.png" alt="" />
+              <span class="icon__info">123-456-7980</span>
+            </figure>
+            <figure class="modal__icon">
+              <img class="modal__icon--img" src="./assets/text.png" alt="" />
+              <span class="icon__info">123-456-7980</span>
+            </figure>
+            <figure class="modal__icon">
+              <img class="modal__icon--img" src="./assets/email.png" alt="" />
+              <span class="icon__info">email@email.com</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            We're currently available for booking.
+          </h4>
+          <form action="" id="contact__form">
+            <div class="form__item">
+              <label class="form__item--label">Name:</label>              
+              <input class="input" name="user_name" type="text" required></input>
+              <label class="form__item--label">Email:</label>              
+              <input class="input" name="user_email" type="email" required></input>
+              <label class="form__item--label">Message:</label>              
+              <textarea class="input" name="message" type="text" required></textarea>
+            </div>
+            <div class="button__wrapper">
+              <button id="contact__submit" class="form__submit">
+                Send
+              </button>
+          </div>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon.
+          </div>
+        </div>
+        <i class="fa-solid fa-xmark modal__exit click"></i>
+      </div>
       <section id="new-cards">
         <h1 class="cards-title">Services</h1>
         <div class="card__wrapper">
@@ -144,7 +214,7 @@
                   <p>Deep River, ON</p>
                 </div>
               </div>
-              <p>
+              <p class="review-text">
                 "Matthew demonstrated exceptional expertise, both in answering
                 my questions and in removing the trees on my lot."
               </p>
@@ -157,7 +227,10 @@
                   <p>Pembroke, ON</p>
                 </div>
               </div>
-              <p>"The Staghorn team was friendly and fast. Thanks guys!"</p>
+              <p class="review-text">
+                "The Staghorn team was friendly, fast, and great prices too.
+                Thanks guys!"
+              </p>
             </div>
             <div class="slide-card">
               <div class="profile">
@@ -167,7 +240,7 @@
                   <p>Pembroke, ON</p>
                 </div>
               </div>
-              <p>
+              <p class="review-text">
                 "Matt pulled up on short notice.. saved my garage from being
                 crushed by a dying tree."
               </p>
@@ -180,7 +253,7 @@
                   <p>Petawawa, ON</p>
                 </div>
               </div>
-              <p>
+              <p class="review-text">
                 "I felt claustrophobic in my backyard, everything was so
                 overgrown. You turned it into a sanctuary :)"
               </p>
@@ -192,6 +265,29 @@
           </div>
         </div>
       </section>
+      <footer>
+        <a href="#home"><img src="./assets/staghorn_logo-1.png" alt="" /></a>
+        <ul class="footer-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#new-cards">Services</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <p class="copyright">Copyright &copy 2023 Staghorn Tree Service</p>
+        <p class="roseway">Developed by Roseway Tech</p>
+      </footer>
     </div>
     <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
