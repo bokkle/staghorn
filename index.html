@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Staghorn Tree Services</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,6 +14,15 @@
       referrerpolicy="no-referrer"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("bAPQiLqVIQ4Lxqm7e");
+      })();
+    </script>
   </head>
   <body>
     <div id="parallax-container">
@@ -113,20 +123,23 @@
           <h4 class="modal__sub-title modal__sub-title--contact">
             We're currently available for booking.
           </h4>
-          <form action="" id="contact__form">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
-              <label class="form__item--label">Name:</label>              
-              <input class="input" name="user_name" type="text" required></input>
-              <label class="form__item--label">Email:</label>              
-              <input class="input" name="user_email" type="email" required></input>
-              <label class="form__item--label">Message:</label>              
-              <textarea class="input" name="message" type="text" required></textarea>
+              <label class="form__item--label">Name:</label>
+              <input class="input" name="user_name" type="text" required />
+              <label class="form__item--label">Email:</label>
+              <input class="input" name="user_email" type="email" required />
+              <label class="form__item--label">Message:</label>
+              <textarea
+                class="input"
+                name="message"
+                type="text"
+                required
+              ></textarea>
             </div>
-            <div class="button__wrapper">
-              <button id="contact__submit" class="form__submit">
-                Send
-              </button>
-          </div>
+            <!-- <div class="button__wrapper"> -->
+              <button id="contact__submit" class="form__submit">Send</button>
+            <!-- </div> -->
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fa-solid fa-spinner"></i>
@@ -289,7 +302,6 @@
         <p class="roseway">Developed by Roseway Tech</p>
       </footer>
     </div>
-    <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

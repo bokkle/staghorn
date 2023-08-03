@@ -50,7 +50,7 @@ const handleSwipe = () => {
   } else if (swipeDistance < -50) {
     swipeDown();
   }
-}
+};
 
 const swipeDown = () => {
   if (unit > maxUnit) {
@@ -60,7 +60,7 @@ const swipeDown = () => {
     unit = 0;
     slide.style.top = unit + "px";
   }
-}
+};
 
 const swipeUp = () => {
   if (unit < 0) {
@@ -70,7 +70,7 @@ const swipeUp = () => {
     unit = maxUnit;
     slide.style.top = unit + "px";
   }
-}
+};
 
 downArrow.onclick = () => {
   swipeDown();
@@ -79,3 +79,35 @@ downArrow.onclick = () => {
 upArrow.onclick = () => {
   swipeUp();
 };
+
+// CONTACT
+
+//template_44r65j2
+//service_mgjtqol
+//publickey
+
+const contact = (event) => {
+  event.preventDefault();
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
+  loading.classList += " modal__overlay--visible";
+  emailjs
+    .sendForm(
+      "service_mgjtqol",
+      "template_44r65j2",
+      event.target,
+      "bAPQiLqVIQ4Lxqm7e"
+    )
+    .then(() => {
+      loading.classList.remove("modal__overlay--visible");
+      success.classList += " modal__overlay--visible";
+    })
+    .catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "The email service is temporarily unavailable. Please contact us directly at staghorn.treeservice@gmail.com"
+      );
+    });
+};
+
+const toggleModal = () => {};
