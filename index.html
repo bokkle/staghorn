@@ -39,9 +39,28 @@
                 <a href="#" class="active" onclick="toggleModal()">Contact</a>
               </li>
             </ul>
-            <ul class="mobile-menu">
-              <li><i class="fa-solid fa-bars"></i></li>
-            </ul>
+            <button class="btn__menu" onclick="openMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+              <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <ul class="menu__links">
+                <li class="menu__list">
+                  <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#about" class="menu__link" onclick="closeMenu()">About</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#new-cards" class="menu__link" onclick="closeMenu()">Services</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#" class="menu__link" onclick="closeMenu(), toggleModal()">Contact</a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </div>
@@ -63,19 +82,22 @@
         <h1>Hey, I'm Matt.</h1>
         <ul class="about-list">
           <li class="about-item">
+            <!-- <i class="fa-brands fa-canadian-maple-leaf"></i> -->
             <i class="fa-solid fa-leaf"></i>
             <p class="about-text">
               I run a dedicated team of highly trained, professional arborists
             </p>
           </li>
           <li class="about-item">
+            <!-- <i class="fa-brands fa-canadian-maple-leaf"></i> -->
             <i class="fa-solid fa-leaf"></i>
             <p class="about-text">
-              We take pride in providing top-notch tree removal, pruning,
-              planting, and disease management
+              We take pride in providing top-notch tree removal, pruning, and
+              planting
             </p>
           </li>
           <li class="about-item">
+            <!-- <i class="fa-brands fa-canadian-maple-leaf"></i> -->
             <i class="fa-solid fa-leaf"></i>
             <p class="about-text">
               All of our work is executed with the utmost care for the
@@ -101,8 +123,8 @@
             <br />
             You can best reach us by calling or texting
             <b class="orange">416-270-6681</b>, emailing
-            <b class="orange">staghorn.treeservices@gmail.com</b>, or reaching out through the
-            attached <b class="orange">contact form</b>.
+            <b class="orange">staghorn.treeservices@gmail.com</b>, or reaching
+            out through the attached <b class="orange">contact form</b>.
             <br />
           </p>
           <div class="modal__icons">
@@ -121,7 +143,10 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
-          <i class="fa-solid fa-xmark modal__exit click"></i>
+          <i
+            class="fa-solid fa-xmark modal__exit click"
+            onclick="toggleModal()"
+          ></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">
             We're currently available for booking.

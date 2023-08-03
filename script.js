@@ -116,3 +116,13 @@ const toggleModal = () => {
   isModalOpen = true;
   document.body.classList += " modal--open";
 };
+
+// BURGER MENU 
+
+const openMenu = () => {
+    document.body.classList += " menu--open"
+}
+
+const closeMenu = () => {
+    document.body.classList.remove('menu--open')
+}
