@@ -82,10 +82,6 @@ upArrow.onclick = () => {
 
 // CONTACT
 
-//template_44r65j2
-//service_mgjtqol
-//publickey
-
 const contact = (event) => {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -94,9 +90,9 @@ const contact = (event) => {
   emailjs
     .sendForm(
       "service_mgjtqol",
-      "template_44r65j2",
+      "template_e7lkzxj",
       event.target,
-      "bAPQiLqVIQ4Lxqm7e"
+      "JoRtbLYHIY8V977QW"
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
@@ -110,4 +106,13 @@ const contact = (event) => {
     });
 };
 
-const toggleModal = () => {};
+let isModalOpen = false;
+
+const toggleModal = () => {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open");
+  }
+  isModalOpen = true;
+  document.body.classList += " modal--open";
+};

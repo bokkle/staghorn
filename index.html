@@ -20,7 +20,7 @@
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("bAPQiLqVIQ4Lxqm7e");
+        emailjs.init("JoRtbLYHIY8V977QW");
       })();
     </script>
   </head>
@@ -35,7 +35,9 @@
               <li class="nav-links"><a href="#">Home</a></li>
               <li class="nav-links"><a href="#about">About</a></li>
               <li class="nav-links"><a href="#new-cards">Services</a></li>
-              <li class="nav-links"><a href="#" class="active">Contact</a></li>
+              <li class="nav-links">
+                <a href="#" class="active" onclick="toggleModal()">Contact</a>
+              </li>
             </ul>
             <ul class="mobile-menu">
               <li><i class="fa-solid fa-bars"></i></li>
@@ -98,27 +100,28 @@
             surrounding areas.
             <br />
             You can best reach us by calling or texting
-            <b class="orange">123-456-7890</b>, emailing
-            <b class="orange">email@email.com</b>, or reaching out through the
+            <b class="orange">416-270-6681</b>, emailing
+            <b class="orange">staghorn.treeservices@gmail.com</b>, or reaching out through the
             attached <b class="orange">contact form</b>.
             <br />
           </p>
           <div class="modal__icons">
             <figure class="modal__icon">
               <img class="modal__icon--img" src="./assets/call.png" alt="" />
-              <span class="icon__info">123-456-7980</span>
+              <span class="icon__info">416-270-6681</span>
             </figure>
             <figure class="modal__icon">
               <img class="modal__icon--img" src="./assets/text.png" alt="" />
-              <span class="icon__info">123-456-7980</span>
+              <span class="icon__info">416-270-6681</span>
             </figure>
             <figure class="modal__icon">
               <img class="modal__icon--img" src="./assets/email.png" alt="" />
-              <span class="icon__info">email@email.com</span>
+              <span class="icon__info">staghorn.treeservices@gmail.com</span>
             </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fa-solid fa-xmark modal__exit click"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">
             We're currently available for booking.
@@ -137,9 +140,9 @@
                 required
               ></textarea>
             </div>
-            <!-- <div class="button__wrapper"> -->
+            <div class="button__wrapper">
               <button id="contact__submit" class="form__submit">Send</button>
-            <!-- </div> -->
+            </div>
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fa-solid fa-spinner"></i>
@@ -148,7 +151,6 @@
             Thanks for the message! Looking forward to speaking with you soon.
           </div>
         </div>
-        <i class="fa-solid fa-xmark modal__exit click"></i>
       </div>
       <section id="new-cards">
         <h1 class="cards-title">Services</h1>
@@ -284,7 +286,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#new-cards">Services</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#home" onclick="toggleModal()">Contact</a></li>
         </ul>
         <ul>
           <li>
