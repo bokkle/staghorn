@@ -51,13 +51,22 @@
                   <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
                 </li>
                 <li class="menu__list">
-                  <a href="#about" class="menu__link" onclick="closeMenu()">About</a>
+                  <a href="#about" class="menu__link" onclick="closeMenu()"
+                    >About</a
+                  >
                 </li>
                 <li class="menu__list">
-                  <a href="#new-cards" class="menu__link" onclick="closeMenu()">Services</a>
+                  <a href="#new-cards" class="menu__link" onclick="closeMenu()"
+                    >Services</a
+                  >
                 </li>
                 <li class="menu__list">
-                  <a href="#" class="menu__link" onclick="closeMenu(), toggleModal()">Contact</a>
+                  <a
+                    href="#"
+                    class="menu__link"
+                    onclick="closeMenu(), toggleModal()"
+                    >Contact</a
+                  >
                 </li>
               </ul>
             </div>
@@ -115,31 +124,43 @@
             Staghorn Tree Service
           </h4>
           <p class="modal__para">
-            We do most of our work in the
+            We mostly service the
             <b class="orange">Ottawa Valley</b>, including
             <b class="orange">Pembroke</b>, <b class="orange">Petawawa</b>,
             <b class="orange">Deep River</b>, <b class="orange">Arnprior</b> and
-            surrounding areas.
+            surrounding areas. <br /><br />
+            Here's how we can be contacted:
             <br />
-            You can best reach us by calling or texting
-            <b class="orange">416-270-6681</b>, emailing
-            <b class="orange">staghorn.treeservices@gmail.com</b>, or reaching
-            out through the attached <b class="orange">contact form</b>.
+            <!-- calling or texting <b class="orange">416-270-6681</b>,
+            <br />
+            emailing <b class="orange">staghorn.treeservices@gmail.com</b>,
+            <br />or reaching out through the
+            <b class="orange">contact form</b>. -->
             <br />
           </p>
           <div class="modal__icons">
             <figure class="modal__icon">
               <img class="modal__icon--img" src="./assets/call.png" alt="" />
-              <span class="icon__info">416-270-6681</span>
-            </figure>
-            <figure class="modal__icon">
-              <img class="modal__icon--img" src="./assets/text.png" alt="" />
-              <span class="icon__info">416-270-6681</span>
+              <p class="icon__info">416-270-6681</p>
             </figure>
             <figure class="modal__icon">
               <img class="modal__icon--img" src="./assets/email.png" alt="" />
-              <span class="icon__info">staghorn.treeservices@gmail.com</span>
+              <p class="icon__info">staghorn.treeservices@gmail.com</p>
             </figure>
+            <!-- <figure class="modal__icon">
+              <img class="modal__icon--img" src="./assets/text.png" alt="" />
+              <span class="icon__info">416-270-6681</span>
+            </figure> -->
+            <!-- <figure class="modal__icon">
+              <img
+                class="modal__icon--img"
+                src="./assets/contact-all.png"
+                alt=""
+              />
+              <span class="icon__info">
+                416-270-6681 staghorn.treeservices@gmail.com
+              </span>
+            </figure> -->
           </div>
         </div>
         <div class="modal__half modal__contact">
@@ -166,7 +187,13 @@
               ></textarea>
             </div>
             <div class="button__wrapper">
-              <button id="contact__submit" class="form__submit">Send</button>
+              <button id="contact__submit" class="form__submit">
+                <span>Send</span>
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="bottom"></div>
+                <div class="right"></div>
+              </button>
             </div>
           </form>
           <div class="modal__overlay modal__overlay--loading">
