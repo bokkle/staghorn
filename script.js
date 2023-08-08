@@ -117,6 +117,14 @@ const toggleModal = () => {
   document.body.classList += " modal--open";
 };
 
+const toggleModalAndScroll = () => {
+  toggleModal();
+  setTimeout(() => {
+    const parallaxContainer = document.getElementById("parallax-container");
+    parallaxContainer.scrollTo({ top: 0, behavior: "smooth" });
+  }, 100); // Add a delay of 100 milliseconds
+};
+
 // BURGER MENU
 
 const openMenu = () => {
@@ -227,4 +235,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-

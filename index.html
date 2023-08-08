@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Staghorn Tree Services</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./script.js"></script>
     <link
@@ -13,7 +14,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
@@ -25,10 +25,12 @@
     </script>
   </head>
   <body>
+    <button class="mail__btn" onclick="toggleModalAndScroll()">
+      <i class="fa-solid fa-envelope"></i>
+    </button>
     <div id="parallax-container">
       <div id="home" class="nav-container">
         <div class="navbar">
-          <!-- <img class="logo-img" src="./assets/staghorn_logo-1.png" alt=""> -->
           <h1 class="logo">Staghorn</h1>
           <nav>
             <ul class="nav-list">
@@ -79,7 +81,6 @@
           class="background"
           alt=""
         />
-        <!-- <h1>Staghorn Tree Service</h1> -->
         <img
           src="./assets/staghorn-logo-full-nobg-light.png"
           class="parallax-logo"
@@ -91,14 +92,12 @@
         <h1>Hey, I'm Matt.</h1>
         <ul class="about-list">
           <li class="about-item">
-            <!-- <i class="fa-brands fa-canadian-maple-leaf"></i> -->
             <i class="fa-solid fa-leaf"></i>
             <p class="about-text">
               I run a dedicated team of highly trained, professional arborists
             </p>
           </li>
           <li class="about-item">
-            <!-- <i class="fa-brands fa-canadian-maple-leaf"></i> -->
             <i class="fa-solid fa-leaf"></i>
             <p class="about-text">
               We take pride in providing top-notch tree removal, pruning, and
@@ -106,7 +105,6 @@
             </p>
           </li>
           <li class="about-item">
-            <!-- <i class="fa-brands fa-canadian-maple-leaf"></i> -->
             <i class="fa-solid fa-leaf"></i>
             <p class="about-text">
               All of our work is executed with the utmost care for the
@@ -387,7 +385,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#new-cards">Services</a></li>
-          <li><a href="#home" onclick="toggleModal()">Contact</a></li>
+          <li><a href="#home" onclick="toggleModalAndScroll()">Contact</a></li>
         </ul>
         <ul>
           <li>
@@ -405,9 +403,5 @@
         <p class="roseway">Developed by Roseway Tech</p>
       </footer>
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
