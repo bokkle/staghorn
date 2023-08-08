@@ -1032,6 +1032,9 @@ textarea:focus {
     bottom: 20px;
     right: 20px;
   }
+  .slider img {
+    object-fit: contain;
+  }
 }
 
 /* MED -> LARGE PHONES  */
