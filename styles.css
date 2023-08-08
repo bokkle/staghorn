@@ -225,18 +225,6 @@ header {
   filter: brightness(1.4) contrast(1.4);
 }
 
-@keyframes shine {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
 .foreground img {
   position: absolute;
   transform: translateZ(-5px) scale(1.5);
@@ -426,9 +414,9 @@ header {
   width: 90%;
   max-width: 800px;
   height: 300px;
-  border-radius: 15px;
+  border-radius: 15px !important;
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
   box-shadow: -5px 10px 20px 1px grey;
   margin-bottom: 50px;
 }
@@ -442,6 +430,7 @@ header {
   position: relative;
   background: linear-gradient(to right, #4eaa9a, #2a8271);
   z-index: 2;
+  /* border-radius: 15px 0 0 15px; */
 }
 
 .profile {
