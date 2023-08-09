@@ -419,6 +419,7 @@ header {
   overflow: hidden !important;
   box-shadow: -5px 10px 20px 1px grey;
   margin-bottom: 50px;
+  background-color: #4eaa9a;
 }
 
 .slide-card {
@@ -430,7 +431,7 @@ header {
   position: relative;
   background: linear-gradient(to right, #4eaa9a, #2a8271);
   z-index: 2;
-  /* border-radius: 15px 0 0 15px; */
+  border-radius: 15px 0 0 15px;
 }
 
 .profile {
