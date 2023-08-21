@@ -586,6 +586,10 @@ footer p {
   color: ghostwhite;
 }
 
+.footer-list .priv {
+  font-size: 16px;
+}
+
 .copyright,
 .roseway {
   padding: 10px;
