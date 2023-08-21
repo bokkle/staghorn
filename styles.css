@@ -439,6 +439,7 @@ header {
   box-shadow: -5px 10px 20px 1px grey;
   margin-bottom: 50px;
   background-color: #4eaa9a;
+  z-index: 50;
 }
 
 .slide-card {
